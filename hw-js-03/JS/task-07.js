@@ -24,12 +24,12 @@ const account = {
    * Метод отвечающий за добавление суммы к балансу
    * Создает объект транзакции и вызывает addTransaction
    */
-  deposit(amount, id) {
+  deposit(amount) {
     const transaction = {};
 
     transaction.amount = amount;
     transaction.type = Transaction.DEPOSIT;
-    transaction.id = id;
+    transaction.id = this.transactions.length;
     account.addTransaction(transaction);
     this.balance += amount;
     return this.balance;
@@ -42,16 +42,17 @@ const account = {
    * Если amount больше чем текущий баланс, выводи сообщение
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
-  withdraw(amount, id) {
+  withdraw(amount) {
     if (this.balance > amount) {
       const transaction = {};
 
       transaction.amount = amount;
       transaction.type = Transaction.WITHDRAW;
-      transaction.id = id;
+      transaction.id = this.transactions.length;
       account.addTransaction(transaction);
       this.balance -= amount;
       return this.balance;
+      s;
     } else {
       console.log('Знаяти таку суму неможливо! Недостатньо коштів!');
     }
@@ -98,9 +99,9 @@ const account = {
   },
 };
 
-account.deposit(200, 1);
-account.withdraw(100, 2);
-account.deposit(50, 3);
+account.deposit(200);
+account.withdraw(100);
+account.deposit(50);
 console.log(account.transactions);
 console.log(account.getBalance());
 console.log(account.getTransactionDetails(1));
