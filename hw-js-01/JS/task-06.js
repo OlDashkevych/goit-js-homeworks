@@ -3,8 +3,9 @@
 let input;
 let total = 0;
 
-while ((input = prompt('Enter the number:')) !== null) {
+while (input !== null) {
+  input = prompt('Enter the number:');
   total += Number(input);
 }
-
-alert(`The total of the numbers is equal ${total}`);
+const message = `The total of the numbers is equal ${total}`;
+alert(message);

@@ -5,7 +5,6 @@ const ordered = 50;
 
 if (ordered > total) {
   console.log('На складі недостатньо товарів!');
-}
-else {
+} else {
   console.log('Замовлення оформлене, з вами звяжеться мереджер!');
 }

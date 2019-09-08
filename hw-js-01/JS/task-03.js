@@ -5,15 +5,13 @@ let message;
 
 const enterPassword = prompt('Enter your password!');
 
-if(enterPassword === null) {
+if (enterPassword === null) {
   message = 'Canceled by user!';
 }
-else if(enterPassword === ADMIN_PASSWORD) {
+if (enterPassword === ADMIN_PASSWORD) {
   message = 'Welcome!';
-}
-else {
+} else {
   message = 'Access denied, invalid password!';
 }
 
 alert(message);
-
