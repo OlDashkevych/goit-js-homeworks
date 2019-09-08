@@ -7,8 +7,7 @@ const enterPassword = prompt('Enter your password!');
 
 if (enterPassword === null) {
   message = 'Canceled by user!';
-}
-if (enterPassword === ADMIN_PASSWORD) {
+} else if (enterPassword === ADMIN_PASSWORD) {
   message = 'Welcome!';
 } else {
   message = 'Access denied, invalid password!';
