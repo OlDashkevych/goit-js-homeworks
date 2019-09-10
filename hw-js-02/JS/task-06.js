@@ -1,18 +1,20 @@
 'use strict';
 
-const checkForSpam = function(str) {
-  str = str.toLowerCase();
-  if (str.includes('spam') || str.includes('sale')) {
-    return true;
+const YOU_NUMBER = 'Enter the number:';
+const NOT_NUMBER = 'You have not entered a number, try again!';
+let userInput;
+let total = 0;
+const userNumber = Number.parseFloat(userInput);
+
+while (userInput !== null) {
+  userInput = prompt(YOU_NUMBER, 0);
+  let userNumber = +userInput;
+  if (isNaN(userNumber) && userInput !== null) {
+    alert(NOT_NUMBER);
+    continue;
   } else {
-    return false;
+    total += userNumber;
   }
-};
-
-console.log(checkForSpam('Latest technology news')); // false
-
-console.log(checkForSpam('JavaScript weekly newsletter')); // false
-
-console.log(checkForSpam('Get best sale offers now!')); // true
-
-console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+}
+const message = `The sum is equal ${total}`;
+console.log(message);

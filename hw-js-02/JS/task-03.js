@@ -1,20 +1,20 @@
 'use strict';
-
-const calculateEngravingPrice = function(message, pricePerWord) {
-  return message.split(' ').length * pricePerWord;
+const findLongestWord = function(string) {
+  string = string.split(' ');
+  let theLongestWord = string[0];
+  for (let i = 1; i < string.length; i += 1) {
+    theLongestWord.length < string[i].length
+      ? (theLongestWord = string[i])
+      : string;
+  }
+  return theLongestWord;
 };
 
-console.log(
-  calculateEngravingPrice(
-    'Proin sociis natoque et magnis parturient montes mus',
-    10,
-  ),
-); // 80
-console.log(
-  calculateEngravingPrice(
-    'Proin sociis natoque et magnis parturient montes mus',
-    20,
-  ),
-); // 160
-console.log(calculateEngravingPrice('Donec orci lectus aliquam est', 40)); // 200
-console.log(calculateEngravingPrice('Donec orci lectus aliquam est', 20)); // 100
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+
+console.log(findLongestWord('Google do a roll')); // 'Google'
+
+console.log(findLongestWord('May the force be with you')); // 'force'
+
+const formatString = string =>
+  string.length > 40 ? string.slice(0, 40) + '...' : string;

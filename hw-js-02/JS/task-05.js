@@ -1,26 +1,24 @@
 'use strict';
 
-const formatString = function(string) {
-  string = string.split('');
-  if (string.length > 40) {
-    string = string.slice(0, 40);
-    string.push('...');
-  }
-  return string.join('');
-};
+const checkForSpam = s =>
+  s.toLowerCase().includes('spam') || s.toLowerCase().includes('sale');
 
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
-// вернется оригинальная строка
+// function checkSpam(...spamWords) {
+//   return function checkInclude(s) {
+//     const arg = [...spamWords];
+//     for (let i = 0; i < arg.length; i += 1) {
+//       if (s.toLowerCase().includes(arg[i])) return true;
+//     }
+//     return false;
+//   };
+// }
 
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-// вернется форматированная строка
+// const checkForSpam = checkSpam('spam', 'sale');
 
-console.log(formatString('Curabitur ligula sapien.'));
-// вернется оригинальная строка
+console.log(checkForSpam('Latest technology news')); // false
 
-console.log(
-  formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
-);
-// вернется форматированная строка
+console.log(checkForSpam('JavaScript weekly newsletter')); // false
+
+console.log(checkForSpam('Get best sale offers now!')); // true
+
+console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
