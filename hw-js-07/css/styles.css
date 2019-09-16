@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: rgb(170, 199, 143);
+  padding: 40px;
+  font-family: sans-serif;
+}
+
+input {
+  width: 300px;
+  height: 35px;
+  padding: 8px;
+  margin: 15px;
+  display: block;
+}
+
+#ingredients li {
+  font-size: 20px;
+  color: #2c2020;
+  padding: 4px;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#counter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  height: 50px;
+  font-size: 28px;
+  margin: 20px auto;
+}
+
+#counter span {
+  background-color: #247e0d;
+  text-align: center;
+  line-height: 1.8;
+}
+
+#counter button {
+  border-style: none;
+  background-color: #f89615;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background-color 200ms linear;
+  outline: none;
+}
+
+#counter button:hover {
+  background-color: #ac6405;
+}
+
+/* For task-06 */
+#validation-input.valid {
+  outline: 3px solid #4caf50;
+}
+
+#validation-input.invalid {
+  outline: 3px solid #f44336;
+}
+
+#controls button {
+  width: 100px;
+  height: 40px;
+  border-style: none;
+  font-style: 22px;
+  margin: 10px;
+  background-color: rgb(139, 184, 82);
+  outline: none;
+  transition: background-color 200ms linear;
+}
+#controls button:hover {
+  background-color: rgb(83, 124, 29);
+}
+#boxes div {
+  margin: 10px;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1800px;
+  justify-content: space-between;
+  align-items: center;
+}
