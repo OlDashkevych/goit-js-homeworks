@@ -3,7 +3,6 @@
 const input = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 const defaultName = output.textContent;
-input.addEventListener('change', handleInputText);
 
 function handleInputText({ currentTarget }) {
   if (currentTarget.value === '') {
@@ -11,3 +10,5 @@ function handleInputText({ currentTarget }) {
   }
   output.textContent = currentTarget.value;
 }
+
+input.addEventListener('change', handleInputText);

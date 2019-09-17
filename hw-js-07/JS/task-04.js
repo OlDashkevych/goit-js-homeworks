@@ -2,10 +2,13 @@
 
 let currentValue = 0;
 
+const value = document.querySelector('#value');
+
 const handleDecrement = () => {
   currentValue -= 1;
   value.textContent = currentValue;
 };
+
 const handleIncrement = () => {
   currentValue += 1;
   value.textContent = currentValue;
