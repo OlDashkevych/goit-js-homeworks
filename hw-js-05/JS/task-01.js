@@ -1,12 +1,13 @@
 'use strict';
 
+
 const Account = function(login, email) {
   this.login = login;
   this.email = email;
 };
 
 Account.prototype.getInfo = function() {
-  const message = `Login: ${this.login}, Email: ${this.email}`
+  const message = `Login: ${this.login}, Email: ${this.email}`;
   console.log(message);
 };
 
