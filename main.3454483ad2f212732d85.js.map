@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./index.js"],"names":["console","log"],"mappings":"kHAAA,iBACAA,QAAQC,IAAI,W","file":"main.3454483ad2f212732d85.js","sourcesContent":["import './styles.css';\nconsole.log('HEllo');\n"],"sourceRoot":""}
