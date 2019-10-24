@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework 11</title>
+  <link rel="stylesheet" href="./css/btn-styles.css">
+  <link rel="stylesheet" href="./css/timer.css">
+</head>
+<main>
+  <div class="btn-container">
+    <button class="timer-btn" type="button" data-action="start">Start</button>
+    <button class="timer-btn" type="button" data-action="stop">Stop</button>
+  </div>
+
+
+
+  <div class="container">
+    <div class="balloon white">
+      <div class="star-red"></div>
+      <div class="face">
+        <div class="eye"></div>
+        <div class="mouth happy"></div>
+      </div>
+      <div class="triangle"></div>
+      <div class="string"></div>
+    </div>
+
+    <div class="balloon red">
+      <div class="star"></div>
+      <div class="face">
+        <div class="eye"></div>
+        <div class="mouth happy"></div>
+      </div>
+      <div class="triangle"></div>
+      <div class="string"></div>
+    </div>
+
+    <div class="balloon blue">
+      <div class="star"></div>
+      <div class="face">
+        <div class="eye"></div>
+        <div class="mouth happy"></div>
+      </div>
+      <div class="triangle"></div>
+      <div class="string"></div>
+    </div>
+
+    <div class="timer" id="timer-1">
+      <div class="field">
+        <span class="value" data-value="days">00</span>
+        <span class="label">Days</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="mins">00</span>
+        <span class="label">Minutes</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="secs">00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<body>
+
+  <script type="module" src="./js/task-01.js"></script>
+  <!-- <script type="module" src="./js/task-01-promise.js"></script>
+  <script type="module" src="./js/task-02-promise.js"></script>  -->
+  <!-- <script type="module" src="./js/task-03-promise.js"></script> -->
+  <script src="./js/timer.js"></script>
+</body>
+
+</html>
