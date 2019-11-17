@@ -1,23 +1,50 @@
 'user strict';
 
-let currentValue = 0;
+// let currentValue = 0;
 
+// const value = document.querySelector('#value');
+
+// const handleDecrement = () => {
+//   currentValue -= 1;
+//   value.textContent = currentValue;
+// };
+
+// const handleIncrement = () => {
+//   currentValue += 1;
+//   value.textContent = currentValue;
+// };
+
+// document
+//   .querySelector('button[data-action="decrement"]')
+//   .addEventListener('click', handleDecrement);
+
+// document
+//   .querySelector('button[data-action="increment"]')
+//   .addEventListener('click', handleIncrement);
+
+const counter = document.querySelector('#counter');
 const value = document.querySelector('#value');
 
-const handleDecrement = () => {
-  currentValue -= 1;
-  value.textContent = currentValue;
+const repaint = (elem, num) => {
+  elem.textContent = num;
 };
 
-const handleIncrement = () => {
-  currentValue += 1;
-  value.textContent = currentValue;
+const actions = {
+  state: {
+    value: 0,
+  },
+  decrement() {
+    this.state.value -= 1;
+  },
+  increment() {
+    this.state.value += 1;
+  },
 };
 
-document
-  .querySelector('button[data-action="decrement"]')
-  .addEventListener('click', handleDecrement);
+const changeValue = ({ target }) => {
+  console.log(target.dataset.action);
+  actions[target.dataset.action]();
+  repaint(value, actions.state.value);
+};
 
-document
-  .querySelector('button[data-action="increment"]')
-  .addEventListener('click', handleIncrement);
+counter.addEventListener('click', changeValue);

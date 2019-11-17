@@ -52,7 +52,6 @@ const account = {
       account.addTransaction(transaction);
       this.balance -= amount;
       return this.balance;
-      s;
     } else {
       console.log('Знаяти таку суму неможливо! Недостатньо коштів!');
     }

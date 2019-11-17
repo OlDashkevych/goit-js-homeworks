@@ -8,9 +8,7 @@ const getSortedUniqueSkills = users =>
       allSkills.push(...current.skills);
       return allSkills;
     }, [])
-    .filter((elem, index, array) => {
-      return index === array.indexOf(elem);
-    })
+    .filter((elem, index, array) => index === array.indexOf(elem))
     .sort();
 console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa',

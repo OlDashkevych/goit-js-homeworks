@@ -16,14 +16,15 @@ body {
 }
 
 .gallery {
-  width: 70%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-gap: 16px;
   max-width: 1440px;
   padding: 0;
-  margin: 16px auto;
+  margin: 0;
   list-style: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery__item {
