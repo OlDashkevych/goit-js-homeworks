@@ -35,7 +35,7 @@
     "webpackbar": "^3.1.4"
   },
   "dependencies": {
-    "handlebars": "^4.4.3",
+    "handlebars": "^4.5.3",
     "handlebars-loader": "^1.7.1",
     "lodash.debounce": "^4.0.8",
     "nonblockjs": "^1.0.8",
